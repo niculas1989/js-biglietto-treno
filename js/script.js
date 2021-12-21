@@ -33,6 +33,7 @@ console.log('userAge: ', userAge)
 
 if (isNaN(kmTrip && userAge)) {
     alert('Si possono utilizzare solamente caratteri numerici')
+    window.location.reload() // ! trucchetto da utilizzare pochissimo
 }
 
 
