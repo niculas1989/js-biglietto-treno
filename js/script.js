@@ -32,3 +32,6 @@ console.log('userAge: ', userAge)
 
 // ! Calcolare il prezzo del biglietto secondo le regole specificate sopra
 
+let ticketPrice = kmTrip * 0.21;
+console.log(`Il prezzo del biglietto senza sconti è di ${ticketPrice}`)
+
