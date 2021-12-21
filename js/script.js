@@ -24,10 +24,16 @@ Passiamo all'analisi della traccia:
 
 
 // ! Chiedere all'utente KM ed età (punto 1+2 insieme)
-const kmTrip = prompt('Quanti kilometri vuoi fare?');
+const kmTrip = prompt('Quanti kilometri vuoi fare?').trim();
 console.log('kmTrip: ', kmTrip)
-const userAge = prompt('Quanti anni hai?');
+const userAge = prompt('Quanti anni hai?').trim();
 console.log('userAge: ', userAge)
+
+// ! Gestiamo adesso le eccezioni - se l'utente non inserisce un numero
+
+if (isNaN(kmTrip && userAge)) {
+    alert('Si possono utilizzare solamente caratteri numerici')
+}
 
 
 // ! Calcolare il prezzo del biglietto
