@@ -1,4 +1,5 @@
 body {
+    font-size: 16px;
     height: 100vh;
     width: 100%;
     background-image: url(https://cdn.rinnovabili.it/wp-content/uploads/2021/04/railway-1555348_1280-e1619286521103.jpg);
@@ -16,4 +17,10 @@ body {
     background-color: darkred;
 
     align-self: center;
+}
+
+
+.container p {
+    color: white;
+    font-size: 2rem;
 }
