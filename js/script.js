@@ -32,8 +32,10 @@ console.log('userAge: ', userAge)
 
 // ! Calcolare il prezzo del biglietto
 
-let ticketPrice = kmTrip * 0.21;
+let ticketPrice = (kmTrip * 0.21).toFixed();
 console.log(`Il prezzo del biglietto senza sconti è di ${ticketPrice}`)
+
+
 
 // ! Specificare adesso le tipologie di sconto attraverso gli IF
 
