@@ -30,8 +30,23 @@ const userAge = prompt('Quanti anni hai?');
 console.log('userAge: ', userAge)
 
 
-// ! Calcolare il prezzo del biglietto secondo le regole specificate sopra
+// ! Calcolare il prezzo del biglietto
 
 let ticketPrice = kmTrip * 0.21;
 console.log(`Il prezzo del biglietto senza sconti è di ${ticketPrice}`)
+
+// ! Specificare adesso le tipologie di sconto attraverso gli IF
+
+if (userAge < 18) {
+    const underEighteenPrice = (ticketPrice / 100) * 20;
+    const finalPriceEighteen = ticketPrice - underEighteenPrice;
+
+    console.log(`Il prezzo del biglietto con lo sconto per minorenni è di ${finalPriceEighteen}`)
+} else if (userAge > 65) {
+    const overSixtyFivePrice = (ticketPrice / 100) * 40;
+    const finalPriceSixtyFive = ticketPrice - overSixtyFivePrice;
+
+    console.log(`Il prezzo del biglietto con lo sconto per coloro che hanno più di 65 anni è di ${finalPriceSixtyFive}`)
+}
+
 
