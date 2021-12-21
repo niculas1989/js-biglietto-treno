@@ -34,6 +34,8 @@ console.log('userAge: ', userAge)
 
 let ticketPrice = (kmTrip * 0.21).toFixed();
 console.log(`Il prezzo del biglietto senza sconti è di ${ticketPrice}`)
+const resultElement = document.getElementById('result');
+resultElement.innerHTML = `Il prezzo del tuo biglietto è di ${ticketPrice}€`
 
 
 
@@ -41,14 +43,18 @@ console.log(`Il prezzo del biglietto senza sconti è di ${ticketPrice}`)
 
 if (userAge < 18) {
     const underEighteenPrice = (ticketPrice / 100) * 20;
-    const finalPriceEighteen = ticketPrice - underEighteenPrice;
+    let ticketPriceSale = ticketPrice - underEighteenPrice;
 
-    console.log(`Il prezzo del biglietto con lo sconto per minorenni è di ${finalPriceEighteen}`)
+    console.log(`Il prezzo del biglietto con lo sconto per minorenni è di ${ticketPriceSale}`)
+    const resultElement = document.getElementById('result');
+    resultElement.innerHTML = `Il prezzo del tuo biglietto, visto che hai meno di 18 anni è di ${ticketPriceSale}€`
 } else if (userAge > 65) {
     const overSixtyFivePrice = (ticketPrice / 100) * 40;
-    const finalPriceSixtyFive = ticketPrice - overSixtyFivePrice;
+    let ticketPriceSale = ticketPrice - overSixtyFivePrice;
 
-    console.log(`Il prezzo del biglietto con lo sconto per coloro che hanno più di 65 anni è di ${finalPriceSixtyFive}`)
+    console.log(`Il prezzo del biglietto con lo sconto per coloro che hanno più di 65 anni è di ${ticketPriceSale}`)
+    const resultElement = document.getElementById('result');
+    resultElement.innerHTML = `Il prezzo del tuo biglietto, visto che hai più di 65 anni è di ${ticketPriceSale}€`
 }
 
 
