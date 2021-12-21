@@ -22,3 +22,9 @@ Passiamo all'analisi della traccia:
 4 - il prezzo dovrà essere fornito con al massimo due decimali (per esempio 10.50€); è una proprietà che non abbiamo visto in classe, cercherò come su W3School o su Google.
 */
 
+// ! Chiedere all'utente KM ed età (punto 1+2 insieme)
+const kmTrip = prompt('Quanti kilometri vuoi fare?');
+console.log('kmTrip: ', kmTrip)
+const userAge = prompt('Quanti anni hai?');
+console.log('userAge: ', userAge)
+
