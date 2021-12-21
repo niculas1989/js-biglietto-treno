@@ -19,5 +19,6 @@ Passiamo all'analisi della traccia:
     - il costo è di 0.21€ al KM
     - va applicato uno sconto del 20% per i minorenni (età < 18)
     - va applicato uno sconto del 40% per gli anziani (età > 65)
+4 - il prezzo dovrà essere fornito con al massimo due decimali (per esempio 10.50€); è una proprietà che non abbiamo visto in classe, cercherò come su W3School o su Google.
 */
 
