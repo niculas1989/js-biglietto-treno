@@ -24,9 +24,9 @@ Passiamo all'analisi della traccia:
 
 
 // ! Chiedere all'utente KM ed età (punto 1+2 insieme)
-const kmTrip = prompt('Quanti kilometri vuoi fare?').trim();
+const kmTrip = parseInt(prompt('Quanti kilometri vuoi fare?').trim());
 console.log('kmTrip: ', kmTrip)
-const userAge = prompt('Quanti anni hai?').trim();
+const userAge = parseInt(prompt('Quanti anni hai?').trim());
 console.log('userAge: ', userAge)
 
 // ! Gestiamo adesso le eccezioni - se l'utente non inserisce un numero
@@ -39,7 +39,7 @@ if (isNaN(kmTrip && userAge)) {
 
 // ! Calcolare il prezzo del biglietto
 
-let ticketPrice = (kmTrip * 0.21).toFixed();
+let ticketPrice = (kmTrip * 0.21).toFixed(2);
 console.log(`Il prezzo del biglietto senza sconti è di ${ticketPrice}`)
 const resultElement = document.getElementById('result');
 resultElement.innerHTML = `Il prezzo del tuo biglietto è di ${ticketPrice}€`
@@ -50,14 +50,14 @@ resultElement.innerHTML = `Il prezzo del tuo biglietto è di ${ticketPrice}€`
 
 if (userAge < 18) {
     const underEighteenPrice = (ticketPrice / 100) * 20;
-    let ticketPriceSale = (ticketPrice - underEighteenPrice).toFixed();
+    let ticketPriceSale = (ticketPrice - underEighteenPrice).toFixed(2);
 
     console.log(`Il prezzo del biglietto con lo sconto per minorenni è di ${ticketPriceSale}`)
     const resultElement = document.getElementById('result');
     resultElement.innerHTML = `Il prezzo del tuo biglietto, visto che hai meno di 18 anni è di ${ticketPriceSale}€`
 } else if (userAge > 65) {
     const overSixtyFivePrice = (ticketPrice / 100) * 40;
-    let ticketPriceSale = (ticketPrice - overSixtyFivePrice).toFixed();
+    let ticketPriceSale = (ticketPrice - overSixtyFivePrice).toFixed(2);
 
     console.log(`Il prezzo del biglietto con lo sconto per coloro che hanno più di 65 anni è di ${ticketPriceSale}`)
     const resultElement = document.getElementById('result');
